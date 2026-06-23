@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" role="img" aria-labelledby="title">
+  <title id="title">Placeholder image</title>
+  <rect width="900" height="560" fill="#f5f5f2"/>
+  <g fill="none" stroke="#b7b7b0" stroke-width="4" opacity=".8">
+    <path d="M120 420 320 250 470 340 620 165 780 315"/>
+    <circle cx="320" cy="250" r="42"/>
+    <circle cx="470" cy="340" r="42"/>
+    <circle cx="620" cy="165" r="42"/>
+    <rect x="96" y="96" width="708" height="368" rx="6"/>
+  </g>
+  <g stroke="#d7d7d1" stroke-width="2" opacity=".7">
+    <path d="M96 188h708M96 280h708M96 372h708"/>
+    <path d="M237 96v368M378 96v368M520 96v368M662 96v368"/>
+  </g>
+</svg>
