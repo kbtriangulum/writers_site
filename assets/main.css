@@ -315,12 +315,74 @@ ul.square li{margin:10px 0}
 
 .workshop-row{grid-template-columns:320px 1fr;gap:56px;align-items:center}
 .workshop-row img{height:260px;object-fit:contain}
-.request-title{font-size:30px;margin-bottom:42px}
-.request-accordion .accordion-trigger{font-size:22px;color:#5c84de}
-.request-accordion .accordion-panel{max-width:1200px}
-.request-content{display:grid;grid-template-columns:320px 1fr;gap:58px;align-items:center}
-.request-content h4{color:#5c84de;font-size:18px}
-.request-content img{width:100%;height:300px;object-fit:contain}
+.request-aim{margin-bottom:4px}
+.requests-section{padding-top:72px}
+.request-title{
+  font-size:32px;
+  margin-bottom:56px;
+}
+.request-accordion .accordion-item{
+  border-bottom:0;
+}
+.request-accordion .accordion-trigger{
+  position:relative;
+  display:block;
+  padding:0 58px 20px 8px;
+  border-bottom:1px solid #747474;
+  font-size:21px;
+  color:#5c84de;
+  font-weight:700;
+  line-height:1.0;
+}
+.request-accordion .accordion-trigger::after{
+  content:'';
+  position:absolute;
+  top:5px;
+  right:20px;
+  width:12px;
+  height:12px;
+  border-right:3px solid #777;
+  border-bottom:3px solid #777;
+  transform:rotate(45deg);
+  transition:transform .18s ease;
+}
+.request-accordion .accordion-item.open .accordion-trigger::after{
+  transform:rotate(225deg);
+}
+.request-accordion .accordion-panel{
+  max-width:1200px;
+  padding:28px 8px 0;
+}
+.request-letter{
+  margin:0 0 52px;
+}
+.request-letter p{
+  font-size:15px;
+  line-height:1.35;
+  margin:0 3px 18px;
+}
+.request-content{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:58px;
+  align-items:start;
+  margin-top:42px;
+  border-bottom:1px solid var(--rule);
+  padding-bottom:42px;
+}
+.request-content h4{
+  color:#5c84de;
+  font-size:18px;
+  font-weight:700;
+  margin:0 0 6px;
+}
+.request-content h4:not(:first-child){margin-top:24px}
+.request-content img{
+  width:100%;
+  height:300px;
+  object-fit:contain;
+}
+.request-details .image-credit{margin-top:28px!important}
 
 .mobile-menu{
   display:none;
