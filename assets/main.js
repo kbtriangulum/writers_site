@@ -31,12 +31,6 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.accordion-trigger').forEach(function (button) {
     button.addEventListener('click', function () {
       var item = button.closest('.accordion-item');
-      var accordion = button.closest('.accordion');
-      if (accordion && accordion.classList.contains('questions-accordion') && !item.classList.contains('open')) {
-        accordion.querySelectorAll('.accordion-item.open').forEach(function (openItem) {
-          openItem.classList.remove('open');
-        });
-      }
       item.classList.toggle('open');
     });
   });
