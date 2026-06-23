@@ -405,13 +405,76 @@ ul.square li{margin:10px 0}
 }
 @media (max-width:760px){
   body{font-size:16px}
-  .sidebar{position:static;width:100%;padding:22px 24px}
-  .brand{padding-left:0;margin-bottom:16px;font-size:28px}
-  .nav-group-title{margin-left:0;display:flex;align-items:center;justify-content:space-between}
-  .mobile-menu{display:inline-block}
-  .nav{display:none;padding-left:0;margin-top:18px;grid-template-columns:repeat(2,1fr);gap:10px 20px}
-  body.menu-open .nav{display:grid}
-  .nav li{margin:0 0 6px}
+  .sidebar{
+    position:static;
+    display:grid;
+    grid-template-columns:44px 1fr;
+    align-items:center;
+    gap:0 14px;
+    width:100%;
+    padding:18px 22px;
+  }
+  .brand{
+    grid-column:2;
+    padding-left:0;
+    margin:0;
+    font-size:28px;
+  }
+  .nav-group-title{
+    grid-column:1;
+    grid-row:1;
+    margin:0;
+  }
+  .mobile-menu{
+    position:relative;
+    display:block;
+    width:38px;
+    height:34px;
+    padding:0;
+    border:0;
+    background:transparent;
+    color:transparent;
+    font-size:0;
+  }
+  .mobile-menu::before,
+  .mobile-menu::after{
+    content:'';
+    position:absolute;
+    left:4px;
+    width:30px;
+    height:3px;
+    background:#ededed;
+    border-radius:2px;
+    transition:transform .18s ease, top .18s ease, box-shadow .18s ease;
+  }
+  .mobile-menu::before{
+    top:8px;
+    box-shadow:0 8px 0 #ededed;
+  }
+  .mobile-menu::after{top:24px}
+  body.menu-open .mobile-menu::before{
+    top:16px;
+    transform:rotate(45deg);
+    box-shadow:none;
+  }
+  body.menu-open .mobile-menu::after{
+    top:16px;
+    transform:rotate(-45deg);
+  }
+  .nav{
+    grid-column:1 / -1;
+    display:none;
+    padding:16px 0 0 0;
+    margin:12px 0 0;
+    border-top:1px solid #383838;
+  }
+  body.menu-open .nav{display:block}
+  .nav li{margin:0}
+  .nav a{
+    display:block;
+    padding:11px 0;
+    font-size:17px;
+  }
   .main{margin-left:0}
   .container{width:calc(100% - 36px)}
   .hero{min-height:270px}.hero.hero-small{min-height:250px}
