@@ -73,8 +73,6 @@ a:hover{color:#004f64}
   min-height:100vh;
 }
 .hero{
-  position:relative;
-  overflow:hidden;
   min-height:330px;
   display:flex;
   align-items:center;
@@ -85,19 +83,13 @@ a:hover{color:#004f64}
   background-position:center;
 }
 .hero.hero-small{min-height:280px}
-.hero-img{
-  position:absolute;
-  inset:0;
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center;
-  z-index:0;
-}
-.hero > div{
-  position:relative;
-  z-index:1;
-}
+.home-banner{background-image:url('images/home/home_banner.jpg')}
+.questions-banner{background-image:url('images/questions/questions_banner.jpg')}
+.places-banner{background-image:url('images/places/places_banner.jpg')}
+.stories-banner{background-image:url('images/stories/stories_banner.jpg')}
+.requests-banner{background-image:url('images/requests/requests_banner.jpg')}
+.knocking-banner{background-image:url('images/knocking/knocking_banner.jpg')}
+.workshop-banner{background-image:url('images/workshop/workshop_banner.jpg')}
 .hero h1{
   margin:0;
   font-weight:300;
